@@ -1,14 +1,14 @@
 (ns sketch.core
   (:require [quil.core :as q])
-  (:require [sketch.dynamic :as dynamic])
+  (:require [sketch.soft_edges :as soft_edges])
   (:gen-class))
 
 (q/defsketch example
              :title "Sketch"
-             :setup dynamic/setup
-             :draw dynamic/draw
-             :size [900 900])
+             :setup soft_edges/setup
+             :draw soft_edges/draw
+             :size [650 300])
 
 (defn refresh []
-  (use :reload 'sketch.dynamic)
+  (use :reload 'sketch.soft_edges)
   (.loop example))

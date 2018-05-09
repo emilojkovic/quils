@@ -11,4 +11,4 @@
   ; in case you write java code
   :java-source-paths ["src/java"]
   ; enables ahead-of-time compilation
-  :aot [sketch.dynamic])
+  :aot [sketch.soft_edges])
